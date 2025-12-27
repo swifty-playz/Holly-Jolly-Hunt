@@ -22,7 +22,7 @@ DAY 1 (12/21/25) - Learn JavaScript:
 - Made the "Hello world!" text now write out player health
 - Made the jump scare effect when colliding with the enemy
 
-DAY 2 (12/22/25) - Put sum art in this bih:
+DAY 2 (12/22/25):
 - Added a name property and created a bunch of collectible objects in the collectibles array
 - Learned how to concatenate strings
 - Rather than just printing "Collected!", it now prints "Collected: ", followed by the item name
