@@ -1,0 +1,101 @@
+DAY 1 (12/21/25) - Learn JavaScript:
+- Created canvas
+- Drew "Hello world!"
+- Drew a blue rectangle
+- Got user input and printed what key was pressed
+- Learned about objects
+- Made a player object
+- Made player move
+- Drew a useless white border
+- Drew another block, but this time it is yellow :)
+- Learned how to detect when 2 objects collide, though currently only prints "COLLISION DETECTED"
+- Learned how to actually collide
+- Drew yet another block that is green
+- Made collision system universal
+- Made it collect and remove green block, the temporary collectible, when collided with
+- Hey.. guess what I just did... yup I drew block, but orange this time [insert ANOTHER ONE meme]
+- Made the orange block the enemy and made it always follow the player
+- ERROR: If caps is on, you can't moved
+- If collide with the enemy, he respawns back to his original spawn point
+- Added a health variable to the player object, setting it to 5
+- If player collides with enemy, health decreases by 1
+- Made the "Hello world!" text now write out player health
+- Made the jump scare effect when colliding with the enemy
+
+DAY 2 (12/22/25) - Put sum art in this bih:
+- Added a name property and created a bunch of collectible objects in the collectibles array
+- Learned how to concatenate strings
+- Rather than just printing "Collected!", it now prints "Collected: ", followed by the item name
+- Created a scenes list that holds the menu and game scenes
+- Created currentScene variable that will track the current scene obviously
+- Created a startButton object
+- Created drawButton function
+- Researched a bunch of other stuff and made a bunch of other functions, and FINALLY I have TWO scenes, GAME and MENU, that are fully FUNCTIONAL!
+- Created lose scene
+- If player.health <= 0, switches to lose scene
+- After about 45 GOSH DARN MINUTES I finally have a lighting system in place, drawing a black rectangle and then a whole that shows the player, giving a darkness effect to the game :)
+- Made a camera that follows the player
+- Using jumpscare code as reference, I was able to make the pulse system, but still need to add a cooldown, so the player can not spam it
+- Added a simple && statement so the player can't have the pulse going non-stop, but they can still activate it as soon as it ends, so I still need to work on the cooldown even more
+- Finished the pulse cooldown system -> 2 sec pulse ability with a 10 sec cooldown
+- Created win scene that appears when all items have been collected by checking the player.items value that gets increased every time a collectible is picked up
+- Created a controls scene, a controls button in the menu, and a menu button in the controls scene
+- Made so when the pulse is activated, enemies come to a halt
+- Drew Santa hat, Christmas tree, and candy cane collectibles, as well as elf player sprite
+- Learned how to draw images on the screen
+- Now draws the Santa hat, Christmas tree, and candy cane collectibles, as well as elf player sprite
+- ERROR: Due to the images being drawn in a 32x32 box, it leaves extra padding causing for collisions to goof up
+- Fixed the error by using Aseprite's trim feature to quickly trim the excess padding on all the images, bringing back the perfect collisions that the rect's had previously
+- Drew stocking, cookies, and milk collectibles, and loaded them into the game
+- Drew and added enemy sprite to the game
+- Zoomed the camera in
+- Fixed the images from looking blurry to looking clear and clean
+- Learned that the camera system actually moves the world, so whatever is drawn after its restoration, can stay put, leading to it being easy to make the HUD system
+- Made the HUD system that still is only tracking the player health
+
+DAY 3 (12/23/25) - Technically still day 2...:
+NOTE: Yeah it's 12am right now, been working on this a whole lot, so I could put this in day 2, but ima put it in day 3, as it did just turn to the 23rd, so yeah lol, back to work
+- Added text to the HUD that displays "Pulse available" when well the pulse is available DUHH, but after it's been used, it displays the cooldown time
+- Made a enemies array that holds multiple of the same enemy objects
+- Found a free bell sound effect and music to use as the winning music
+- Learned how to load sounds into the game, and implemented bell sound effect and winMusic
+- Found a free jump scare sound effect and implemented it into the game
+- Found a free song to add in the menu and a lose sound effect, and implemented the lose sound effect into the game
+- Found a free ambience background sound
+- Implemented the looping song to the main menu/controls scenes
+- Implemented the looping background ambience sound to the game scene
+- Found a free pickup sound effect and implemented it into the game when collecting a collectible
+- Drew a very basic tilesheet, and created a empty map, and loaded it into the game
+- Changed canvas size from 800x600 to 768x768 to give a clean and perfect size map
+NOTE: Idc about none of that pixel coherence stuff
+- Made the white borders go along the maps edge
+- Made a borders list that holds the 4 border edge objects
+- Made it draw the borders using the borders list of objects
+- Gave the borders a collision
+- Drew bell image for HUD and implemented it into the game
+- Drew health image for HUD and implemented it into the game
+- Improved game HUD to look polished
+- Made the pulse cooldown display the seconds as a integer, rather than a decimal value
+- Centered the items in the menu scene
+- Improved the Controls scene and added text to display the controls and goal of the game
+- Added start button and menu button to the win scene so the player can return to menu or replay from there
+- Added start button and menu button to lose scene as well
+- ERROR: When the player clicks replay, it doesn't put everything back into place--collectibles, enemies, and player
+- Added spawnX and spawnY to player object, 
+- Created reset function and implemented it so all variables get reset to original when starting game scene
+- Added baseSpeed property to the enemy objects
+- Now as the player collects a item, each enemy speed SLIGHTLY increases using this formula: enemy.speed = enemy.baseSpeed + (player.items * 0.03);, leading to the game becoming progressively more difficult
+- Changed the camera variables from constant variables in drawGame() to normal variables that are global
+- Implemented a screen shake effect when the player and enemy collide
+- Drew house image, loaded it, scattered 7 of them around the map, and gave them collisions
+- Drew tree image, loaded it, scattered 7 of them around the map, and gave them collisions
+- Created a list for a bunch of different possible spawn locations for the collectibles
+- Made the collectibles spawn randomly each time the game is played
+- Added two more enemies to the enemies list of enemy objects
+- Made each of the four enemies spawn at one corner
+- Changed player spawn to the middle of the map
+- Increased zoom from 2 to 3
+- Decreased radiusNorm from 75 to 30
+- Decreased player speed from 5 to 2
+- Added text to the HUD that displays the amount of items left to find
+- Drew a background image, loaded it, and now it displays on the menu, controls, win, and lose scenes
